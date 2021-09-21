@@ -1,0 +1,92 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100px;
+	z-index: 5;
+		&__content {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+		}
+
+		&__main {
+			display: flex;
+			align-items: center;
+		}
+
+		&__logo {
+            width: 112px;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+		}
+
+		&__time {
+			display: flex;
+			align-items: center;
+			@include adaptiv-value('margin-left', 37, 30, 1);
+			font-size: 16px;
+            color: rgba(255, 255, 255, 0.75);
+             &:before{
+                color: $red;
+                font-size: 20px;
+				margin: 0px 13px 0px 0px;
+            }
+		}
+
+		&__menu {
+		}
+}
+
+.menu {
+
+		&__body {
+		}
+
+		&__list {
+			display: flex;
+			align-items: center;
+
+			li{
+				&:not(:last-child){
+				  margin: 0px 63px 0px 0px;
+				}
+			}
+		}
+
+		&__link {
+			color: rgba(255, 255, 255, 0.75);
+			position: relative;
+			 &:before{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -4px;
+				width: 100%;
+				height: 1px;
+				background: rgba(255, 255, 255, 0.75);
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: all .3s ease-in-out;
+			}
+			@media(any-hover: hover){
+				&:hover{
+					 &:before{
+						content: '';
+						bottom: -1px;
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+
+		&__btn {
+		}
+}
