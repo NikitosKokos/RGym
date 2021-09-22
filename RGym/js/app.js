@@ -2,9 +2,8 @@ function email_test(input) {
 	return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
 }
 document.addEventListener('DOMContentLoaded', () => {
-
     // slider
-    if(document.querySelector('.hero__slider')){
+    if (document.querySelector('.hero__slider')) {
         new Swiper('.hero__slider', {
             slidesPerView: 1,
             watchOverflow: true,
@@ -20,6 +19,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // header
+    const header = document.querySelector('.header');
+
+    const callback = function (entries, observer) {
+        if (entries[0].isIntersecting) {
+            header.classList.remove('_scroll');
+        } else {
+            header.classList.add('_scroll');
+        }
+    };
+
+    const headerObserver = new IntersectionObserver(callback);
+    headerObserver.observe(header);
+    
 }); // end
 let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
@@ -848,7 +861,13 @@ function gallery_init() {
 	}
 }
 //=================;
-// @ @include('files/burger.js', {});
+const burger = document.querySelector('.burger');
+const headerMenu = document.querySelector('.menu__body');
+burger.addEventListener("click", () =>{
+    headerMenu.classList.toggle("_active");
+    burger.classList.toggle("_active");
+    document.body.classList.toggle("_lock");
+});;
 // @ @include("files/spoller.js",{});
 // @ @include("files/select.js",{});
 // @ @include("files/tabs.js",{});

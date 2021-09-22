@@ -5,6 +5,12 @@
 	width: 100%;
     height: 100px;
 	z-index: 5;
+
+	&._scroll{
+		height: 80px;
+		background: rgb(12, 12, 12);
+	}
+
 		&__content {
             height: 100%;
             display: flex;
@@ -19,6 +25,11 @@
 
 		&__logo {
             width: 112px;
+			position: relative;
+			z-index: 10;
+			@media (max-width: $md4+px){
+			   width: 100px;
+			}
             img{
                 width: 100%;
                 height: auto;
@@ -37,6 +48,9 @@
                 font-size: 20px;
 				margin: 0px 13px 0px 0px;
             }
+			@media (max-width: $md2+px){
+			   display: none;
+			}
 		}
 
 		&__menu {
@@ -44,17 +58,57 @@
 }
 
 .menu {
-
+	display: flex;
+	align-items: center;
 		&__body {
+			@media (max-width: $md3+px){
+			   position: fixed;
+			   top: 0;
+			   width: 100%;
+			   height: 100%;
+			   background: #111;
+			   right: 100%;
+			   z-index: 5;
+			   padding: 140px 0px 20px 0px;
+			   overflow: auto;
+			   transition: all .3s ease-in-out;
+			}
+
+			&:before{
+               content: '';
+               position: fixed;
+               width: 100%;
+               height: 100px;
+               top: 0;
+               right: 100%;
+               background: rgb(12, 12, 12);
+               transition: all .3s ease-in-out;
+               z-index: 2;
+           }
+
+		    &._active{
+               right: 0;
+                &:before{
+                   right: 0;
+               }
+           }
 		}
 
 		&__list {
 			display: flex;
 			align-items: center;
+			@media (max-width: $md3+px){
+				flex-direction: column;
+			}
 
 			li{
 				&:not(:last-child){
 				  margin: 0px 63px 0px 0px;
+				}
+				@media (max-width: $md3+px){
+					&:not(:last-child){
+					  margin: 0px 0px 63px 0px;
+					}
 				}
 			}
 		}
@@ -62,6 +116,9 @@
 		&__link {
 			color: rgba(255, 255, 255, 0.75);
 			position: relative;
+			@media (max-width: $md3+px){
+			   font-size: 20px;
+			}
 			 &:before{
 				content: '';
 				position: absolute;
