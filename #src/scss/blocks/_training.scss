@@ -1,7 +1,8 @@
 .training {
-    @media (min-width: $md3+px){
-       display: flex;
-    }
+      @include adaptiv-value('margin-bottom', 155, 40, 1);
+      @media (min-width: $md3+px){
+            display: flex;
+      }
 		&__image {
             @media (min-width: $md3+px){
                position: relative;
@@ -70,9 +71,9 @@
 		}
 
 		&__descr {
-            @include adaptiv-value('font-size', 18, 16, 1);
+            @include adaptiv-value('font-size', 18, 15, 1);
             line-height: 156%;
-            letter-spacing: -0.05em;
+            letter-spacing: 0.05em;
             color: rgba(255, 255, 255, 0.75);
             @media (min-width: $md3+px){
                 max-width: 496px;

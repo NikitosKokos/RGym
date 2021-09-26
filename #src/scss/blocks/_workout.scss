@@ -21,7 +21,7 @@
             @include adaptiv-value('font-size', 18, 15, 1);
             line-height: 144%;
             text-align: center;
-            letter-spacing: -0.05em;
+            letter-spacing: 0.05em;
             color: rgba(255, 255, 255, 0.75);
             max-width: 790px;
             @include adaptiv-value('margin-bottom', 30, 20, 1);
@@ -148,13 +148,13 @@
 		&__text {
             @include adaptiv-value('font-size', 18, 15, 1);
             line-height: 156%;
-            letter-spacing: -0.05em;
+            letter-spacing: 0.05em;
             color: rgba(255, 255, 255, 0.75);
             flex: 0 0 715px;
             padding: 0px 0px 0px 15px;
             border-left: 2px solid $red;
 
-            @media (max-width: $md2+px){
+            @media (max-width: $md1+px){
                 flex: 1 1 auto;
                br{
                    display: none;

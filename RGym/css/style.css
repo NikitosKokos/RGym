@@ -1576,7 +1576,7 @@ button.swiper-pagination-bullet {
   font-size: 18px;
   line-height: 144%;
   text-align: center;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.75);
   max-width: 790px;
   margin-bottom: 30px;
@@ -1688,13 +1688,17 @@ button.swiper-pagination-bullet {
 .workout__text {
   font-size: 18px;
   line-height: 156%;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.75);
   -webkit-box-flex: 0;
       -ms-flex: 0 0 715px;
           flex: 0 0 715px;
   padding: 0px 0px 0px 15px;
   border-left: 2px solid #A92A1D;
+}
+
+.training {
+  margin-bottom: 155px;
 }
 
 .training__image img {
@@ -1743,8 +1747,56 @@ button.swiper-pagination-bullet {
 .training__descr {
   font-size: 18px;
   line-height: 156%;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.75);
+}
+
+.welcome__img_o {
+  margin-bottom: 57px;
+}
+
+.welcome__img img {
+  width: 100%;
+}
+
+.welcome__text {
+  padding: 40px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.welcome__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.welcome__label img {
+  width: 75px;
+  margin: 0px 0px 0px 10px;
+}
+
+.welcome__descr {
+  font-size: 18px;
+  font-size: 18px;
+  line-height: 144%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 388px;
 }
 
 ._container {
@@ -1839,6 +1891,26 @@ body._lock {
   .training__descr {
     max-width: 496px;
   }
+
+  .welcome__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin: 0 -24px;
+    margin-left: -24px;
+    margin-right: -24px;
+  }
+
+  .welcome__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 33.33%;
+            flex: 0 0 33.33%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @media (max-width: 1600px) {
@@ -1861,6 +1933,16 @@ body._lock {
 @media (max-width: 1320px) {
   .hero__container {
     min-height: 550px;
+  }
+
+  .workout__text {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+  }
+
+  .workout__text br {
+    display: none;
   }
 
   ._container {
@@ -1933,6 +2015,10 @@ body._lock {
     font-size: calc(15px + 3 * ((100vw - 320px) / 980));
   }
 
+  .training {
+    margin-bottom: calc(40px + 115 * ((100vw - 320px) / 980));
+  }
+
   .training__title {
     font-size: calc(28px + 8 * ((100vw - 320px) / 980));
   }
@@ -1950,7 +2036,19 @@ body._lock {
   }
 
   .training__descr {
-    font-size: calc(16px + 2 * ((100vw - 320px) / 980));
+    font-size: calc(15px + 3 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__img_o {
+    margin-bottom: calc(20px + 37 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__label {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__descr {
+    font-size: calc(15px + 3 * ((100vw - 320px) / 980));
   }
 }
 
@@ -1967,16 +2065,6 @@ body._lock {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 40%;
             flex: 0 0 40%;
-  }
-
-  .workout__text {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 auto;
-            flex: 1 1 auto;
-  }
-
-  .workout__text br {
-    display: none;
   }
 
   ._container {
@@ -2153,6 +2241,24 @@ body._lock {
 
   .header__logo {
     width: 100px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1300px) {
+  .welcome__content {
+    margin-left: calc(0px + -24 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__content {
+    margin-right: calc(0px + -24 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__item {
+    padding-left: calc(0px + 24 * ((100vw - 320px) / 980));
+  }
+
+  .welcome__item {
+    padding-right: calc(0px + 24 * ((100vw - 320px) / 980));
   }
 }
 
